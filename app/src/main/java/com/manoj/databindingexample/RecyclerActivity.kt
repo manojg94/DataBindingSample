@@ -1,19 +1,21 @@
 package com.manoj.databindingexample
 
 import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
+import com.manoj.databindingexample.adapter.reycleradapter.ReycleradapterListener
+import com.manoj.databindingexample.adapter.reycleradapter
+import androidx.recyclerview.widget.RecyclerView
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import com.manoj.databindingexample.R
+import androidx.recyclerview.widget.GridLayoutManager
+import com.manoj.databindingexample.utils.GridSpacingItemDecoration
+import androidx.recyclerview.widget.DefaultItemAnimator
+import com.manoj.databindingexample.Post
+import android.widget.Toast
 import android.util.TypedValue
 import android.view.View
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.manoj.databindingexample.adapter.reycleradapter
-import com.manoj.databindingexample.adapter.reycleradapter.ReycleradapterListener
 import com.manoj.databindingexample.databinding.ActivityRecyclerBinding
-import com.manoj.databindingexample.utils.GridSpacingItemDecoration
 import java.util.*
 
 class RecyclerActivity : AppCompatActivity(), ReycleradapterListener {
@@ -68,7 +70,6 @@ class RecyclerActivity : AppCompatActivity(), ReycleradapterListener {
     }
 
     inner class MyClickHandlers(var context: Context) {
-
         /**
          * Demonstrating updating bind data
          * Profile name, number of posts and profile image
@@ -108,8 +109,8 @@ class RecyclerActivity : AppCompatActivity(), ReycleradapterListener {
 
         fun onPostsClicked(view: View?) {
             Toast.makeText(context, "Posts is clicked!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Posts is clicked!", Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private val posts: ArrayList<Post>
