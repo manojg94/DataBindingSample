@@ -24,6 +24,7 @@ class RecyclerActivity : AppCompatActivity(), ReycleradapterListener {
     private var recyclerView: RecyclerView? = null
     private var binding: ActivityRecyclerBinding? = null
     private var user: User? = null
+    private var userzz: User? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_recycler);
